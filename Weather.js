@@ -8,7 +8,8 @@ export default class Weather extends Component {
         return (
             <LinearGradient colors={["#00C6FB", "#005BEA"]} style={styles.container} >            
                 <View style={styles.upper}>
-                    <Ionicons color="white" size={144} name="ios-rainy"></Ionicons>  {/* expo에 있는 Icon을 사용하는 것으로 expo를 설치하면 사용할 수 있는 패키지이다  */}
+                    {/* expo에 있는 Icon을 사용하는 것으로 expo를 설치하면 사용할 수 있는 패키지이다  */}
+                    <Ionicons color="white" size={144} name="ios-rainy"></Ionicons> 
                     <Text style={styles.temp}> 35도</Text>
                 </View>
                 <View style={styles.lower}>
@@ -27,7 +28,8 @@ const styles = StyleSheet.create({
     upper: {
         flex: 1,
         alignItems: "center",           // 정렬방법 이렇게 하면 모든 항목이 가운데로 온다(기본으로 접근하자)
-        justifyContent: "center"
+        justifyContent: "center",
+        backgroundColor: "transparent"
     },
     temp: {
         fontSize: 48,
